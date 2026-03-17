@@ -112,7 +112,7 @@ export default function SettingsPage() {
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
-               <Field label="Full Name" icon={User} value={profile.full_name} onChange={(v) => setProfile({...profile, full_name: v})} />
+               <Field label="Full Name" icon={User} value={profile.full_name} onChange={(v: string) => setProfile({...profile, full_name: v})} />
                <div style={{ opacity: 0.6 }}>
                   <Field label="Email Address" icon={Mail} value={user?.email || ''} disabled sub="Permanent Identifier" />
                </div>
@@ -124,7 +124,7 @@ export default function SettingsPage() {
              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', fontWeight: 800, marginBottom: '32px' }}>Logistics & Reach</h3>
              
              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '32px' }}>
-                <Field label="Phone Number" icon={Smartphone} placeholder="+250 7xx xxx xxx" value={profile.phone} onChange={(v) => setProfile({...profile, phone: v})} />
+                <Field label="Phone Number" icon={Smartphone} placeholder="+250 7xx xxx xxx" value={profile.phone} onChange={(v: string) => setProfile({...profile, phone: v})} />
                 <Field label="Default Delivery Region" icon={Globe} value="Kigali, Rwanda" disabled />
              </div>
 
@@ -136,7 +136,7 @@ export default function SettingsPage() {
                    <MapPin size={20} style={{ position: 'absolute', left: '16px', top: '16px', color: 'var(--sienna)' }} />
                    <textarea 
                      value={profile.address}
-                     onChange={(e) => setProfile({...profile, address: e.target.value})}
+                     onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setProfile({...profile, address: e.target.value})}
                      placeholder="Street, Landmark, City..."
                      style={{ 
                        width: '100%', padding: '16px 16px 16px 48px', minHeight: '120px', 

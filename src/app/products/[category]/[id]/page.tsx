@@ -240,7 +240,7 @@ export default function ProductDetailPage() {
                 <Zap size={14} fill="#059669" /> Free installation & delivery included for Kigali orders
               </div>
 
-              <div style={{ marginTop: '32px', pt: '32px', borderTop: '1px solid var(--border)' }}>
+              <div style={{ marginTop: '32px', paddingTop: '32px', borderTop: '1px solid var(--border)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                      <span style={{ fontWeight: 700, fontSize: '15px' }}>Quantity</span>
@@ -347,11 +347,11 @@ export default function ProductDetailPage() {
         </div>
 
         {/* ── Customer Reviews Section ── */}
-        <div style={{ marginTop: '100px', pt: '80px', borderTop: '1px solid var(--border)' }}>
+        <div style={{ marginTop: '100px', paddingTop: '80px', borderTop: '1px solid var(--border)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '50px' }}>
             <div>
               <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '36px', fontWeight: 700, color: 'var(--charcoal)' }}>Voices of Our Vibe</h2>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '20px', mt: '10px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginTop: '10px' }}>
                 <div style={{ fontSize: '56px', fontWeight: 900 }}>{product.rating}</div>
                 <div>
                    <div style={{ display: 'flex', gap: '2px' }}>
@@ -375,7 +375,7 @@ export default function ProductDetailPage() {
                       <span style={{ fontWeight: 800, fontSize: '15px' }}>{review.author}</span>
                       <span style={{ fontSize: '12px', color: 'var(--gray-warm)' }}>{review.date}</span>
                    </div>
-                   <div style={{ display: 'flex', gap: '2px', mb: '16px' }}>
+                   <div style={{ display: 'flex', gap: '2px', marginBottom: '16px' }}>
                      {[1,2,3,4,5].map(s => <Star key={s} size={12} fill={s <= review.rating ? 'var(--gold)' : 'none'} color={s <= review.rating ? 'var(--gold)' : '#EEE'} />)}
                    </div>
                    <p style={{ fontSize: '15px', color: 'var(--charcoal-light)', lineHeight: 1.6, marginTop: '16px' }}>"{review.text}"</p>
